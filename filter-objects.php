@@ -9,6 +9,7 @@ Text Domain: filter-objects
 */
 
 use FilterObjects\Includes\Autoloader;
+use FilterObjects\Includes\FilterObjects;
 
 defined( 'ABSPATH' ) || exit;
 const FILTER_OBJECTS_FILE = __FILE__;
@@ -16,3 +17,6 @@ const FILTER_OBJECTS_FILE = __FILE__;
 require_once dirname( __FILE__ ) . '/includes/Autoloader.php';
 
 $loader = new Autoloader();
+$loader->register();
+
+FilterObjects::instance()->init();
