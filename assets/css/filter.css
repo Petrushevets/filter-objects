@@ -1,0 +1,23 @@
+.filter .active {
+    color: red;
+}
+
+.filter ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.filter li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.filter .filter-item {
+    display: flex;
+    align-items: center;
+}
+
+.filter-clear {
+    cursor: pointer;
+}
