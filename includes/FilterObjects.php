@@ -2,6 +2,7 @@
 
 namespace FilterObjects\Includes;
 
+use FilterObjects\Includes\Ajax\AjaxRequest;
 use FilterObjects\Includes\Assets\CssLoader;
 use FilterObjects\Includes\Assets\JsLoader;
 use FilterObjects\Includes\PostTypes\ObjectPostType;
@@ -18,6 +19,8 @@ class FilterObjects {
 	public CssLoader $cssLoader;
 
 	public JsLoader $jsLoader;
+
+	public AjaxRequest $ajaxRequest;
 
 	protected static ?self $instance = null;
 
@@ -51,5 +54,6 @@ class FilterObjects {
 		$this->filterShortcode = new FilterShortcode();
 		$this->cssLoader       = new CssLoader();
 		$this->jsLoader        = new JsLoader();
+		$this->ajaxRequest     = new AjaxRequest();
 	}
 }
