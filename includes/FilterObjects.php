@@ -3,12 +3,15 @@
 namespace FilterObjects\Includes;
 
 use FilterObjects\Includes\PostTypes\ObjectPostType;
+use FilterObjects\Includes\Shortcodes\FilterShortcode;
 
 defined( 'ABSPATH' ) || exit;
 
 class FilterObjects {
 
 	public ObjectPostType $objectPostType;
+
+	public FilterShortcode $filterShortcode;
 
 	protected static ?self $instance = null;
 
@@ -38,6 +41,8 @@ class FilterObjects {
 	 * @return void
 	 */
 	private function components(): void {
-		$this->objectPostType = new ObjectPostType();
+		$this->objectPostType  = new ObjectPostType();
+		$this->filterShortcode = new FilterShortcode();
+
 	}
 }
